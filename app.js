@@ -14,4 +14,8 @@ app.get("/", (req, res) => {
   res.send("Welcome to the Budgtr App!");
 });
 
+app.get("*", (req, res) => {
+  res.status(404).send({ message: "Not Found" });
+});
+
 module.exports = app;
